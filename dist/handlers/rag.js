@@ -25,17 +25,17 @@ const responseSchema = {
 // 2. INSTRUCCIÓN DE SISTEMA ANTI-ALUCINACIÓN (Se mantiene estricta)
 const systemInstruction = `Eres un motor de mapeo de esquemas de base de datos. Utiliza EXCLUSIVAMENTE la información del contexto RAG. Si la información necesaria no está contenida en el contexto RAG, devuelve ÚNICAMENTE UN ARREGLO JSON VACÍO: []. No inventes datos.`;
 // 3. INICIALIZACIÓN (Vertex AI SDK)
-//const ai2 = new VertexAI({
-//    project: 'davinci-onegroup-sqa', 
-//    location: 'us-central1'
-//});
 const ai = new VertexAI({
-    project: 'davinci-onegroup-sqa', // <-- obligatorio
-    location: 'us-central1',
-    googleAuthOptions: {
-        keyFilename: keyPath
-    }
+    project: 'davinci-onegroup-sqa',
+    location: 'us-central1'
 });
+//const ai = new VertexAI({
+//    project: 'davinci-onegroup-sqa', // <-- obligatorio
+//    location: 'us-central1',
+//    googleAuthOptions: {
+//        keyFilename: keyPath
+//    }
+//});
 const modelName = 'gemini-2.5-flash-lite';
 const ragCorpusId = 'projects/davinci-onegroup-sqa/locations/us-east1/ragCorpora/6917529027641081856';
 const model = ai.preview.getGenerativeModel({

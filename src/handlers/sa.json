@@ -1,12 +1,13 @@
 {
-    "type": "service_account",
-    "project_id": "davinci-onegroup-dev",
-    "private_key_id": "b6b2144631923fb37c68e88ba62ec8a048330a25",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDehZO6+WvA7/I1\nzMUyPFwnZ6DswA77HBWWKzZRv5XzpgDKuAL61FFIWYog3EMnhfzWvOsFH6EnFE/4\neRxnN4wZt1LcQ8LtWBKDe6+q+05yyyoxVnv4slAjBHuuilRHcnXyIQDrl29LEB6R\n4e6CgotkG0xx9jo1G5PKzJfBEJ5o0kl3hh00ldt+aj1u9WQAH1P2gtIL9s/e7Mxg\nACbJrLiysrJ42+tQxVXiTo4fWSf/OJ16Z/IwIkSqBT2rAMvi4B6so2SAYpADXcxz\nnWtSAjMXzUNcGtHvTSNvo4pDY6rN0CQxbaB1/JF6SWh1L/ccpvp7PF/w1nQq1dKH\nwJ+atqVXAgMBAAECggEARvtSNCcDFeEUoM/Iqa0yckluvobHYJfFVQlEww/7u+Sc\nxQ2suamHoi4Zz0Cj1VQ64p8R0ykTRX2HwwmTI2PHN57Qej3NTNu20CVg1Ihkrl6b\nf3CIjD0JLhpsf7FVkBL1h766ZeyBDm8+aSeqZwxQfabtnD7As5cv7lWUJPxxo5q0\nPPipP13RE8NZC9qBrlxPi0o/4TzuVx1Ja/vxhrsavrXRVXeeOjgU0skSADL0Gs6o\nymsHRHRC+CvLN+8oTxj8SmxBjyaJbWOScJ7c7xtr/J9dG/O5RnnQx332qGNjQuP2\npy8vPtP4R6Jcg97tDCqfzDezFkOFVB0HL64n9o83TQKBgQD/yD+/Y4fyEDzTBDQn\n4TVS9+uvFBWALw994f1QK3XTK+kibVorIu5RaXmIKBpMedPcdV0Ws0pf0sSr/Zz7\nPtkFwKc4Tr4mhjEf1XGSlCXKLiKyFJqsq+V9NBQ9uNADBl3Cq5lMx2FL03MH+eCi\nNLjVuUvlmyIRJ2+IB6yWJW+XVQKBgQDethQaD70am495egMdmzzJAaeAMBunhiLX\nuzQzPdDMoi4RV7F82td55YG/9exvVZPUtzx308SrVh6NW6JAkxBhgKPEEJP3HbuC\nQ5+tS3ClxdNGbKAGLntw8sgDN3J0rlWgtttIgf/WbH9rT1+bZxSD+yzc/FKkM3P3\nNZ1k1P4x+wKBgQDYBRI5nGCzAh2shY9a4uu7H6EP4yFpedVWlmbur1W6PAqQRdRy\nO/UUEsVORbg4QGe6d/BffJpipUnui6lp06FMJ3HSr0YOmSSh4w0hIzdrMl2hEp+z\nFxYhELvLiOs8ssK651v4KSc19+XdpZ6ev3IfJng/+S3jWO/r7bdHs2Q0ZQKBgGPr\nNsuWghYc8triZeFzk2rvRhIaA14+rQUy5TGUK0iT/q0jNes5V/FFidfw4rn0oBWQ\nfB2asiLYyW5MTVhBYtkL2O2PLoNxIH5KDqq2LP0C604uUAFV+2XqVtgymTRGPv6S\n64D1ai3ukaA4hUF4lti76R3gSseGmiGwOURS1xTfAoGBAJ0CaR88I37V0E00ERWY\nrce5anpwoE9A2YPNUOpVUPb7qfK7JgtrdvmrevJ5kucE+FrcBzXe9bo8WhdQQ3aJ\ntYc+kOIPDveHXUWqgq8KhHoYZ7J7s59KwRVKrn5wa7UNzLTUujlATwX0UVyjfVSP\nyqvEosVZUa0+LbUmpg95eJic\n-----END PRIVATE KEY-----\n",
-    "client_email": "secret-manager@davinci-onegroup-dev.iam.gserviceaccount.com",
-    "client_id": "112497381964628188238",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/secret-manager%40davinci-onegroup-dev.iam.gserviceaccount.com"
+  "type": "service_account",
+  "project_id": "davinci-onegroup-sqa",
+  "private_key_id": "d7412fa0f3550bb6ce73e90ceb3bc3ecaa9efdb4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCG33lPpy0BXa/3\nQMrZbziFnSkBsHacYtTiwVhVa57FJXJXLZkPzXJrlZqEt4ZEq+yoGRA+I+F8DzU2\nxVO5ibg2do63eLoJXjhzmmbmvgG2PkYOAGu4mgouJjmxayO2+ywmbwEoTbOs0F2X\nddeuJMvlehmiv4dRJNIfBo1ZVsgSyZEf0WksRgloHeUyISwkvdctxzEtO7Kg7DTn\niwpKdhUZOtoxWBjsC33J+5niPv6Kn8JmSsvBcie4HnIv9CCXPGJIEGOUu1AMk3nw\nhzwUlgPYFmVntvLE4vRESUBhUxBhr52NQAdg+tEeUNl8jWuxWvzaEYCnjh41isBi\nkaMaCZKFAgMBAAECggEAAoqIpPQNeIZ5lDQ7PjA9oQdpzOCP6maJcd0jtpIEKm91\n07DPLImMMo8m0l0t/M30vQd9k1q4tmB1jEiPpKHrkfcgT63tj2XEtPKbAZWF5AUR\nEGfBxGT+mRva1pBGtg+plRODDiRqW5VC309STcW6tgbJaLioqmI43CE3i5AoFrsS\n7dk9z91hAMj6A8D5lPnGwnKKM9j6e7ooygpQ9rauwN+GqS7fcWkALG/aWa0Ac0rU\nLZYaDIfgKIUTS8Bddn00vz8IDPcZSssrvIoEvznP4WXPwe1brHSfQ2wmamUGh2W3\nxzpxzF1eCG4aF3zC0aECOsHIf7rGULy2mGEMdiRdpwKBgQC8ip6JTsjVQHhRz59R\ngZwz2Phyl+jT8g0eUdqPnKlXjr0Nl75JT9RdpKA7Lxv+93KV42EZw5djJCRSeB3c\nQgcBJSdfTrMpHWrtANh3+Mfw3Qa+uMc+O5obCdoa2PcPMC9JRQxb951Zhqpv2n7h\nsG+0kRgwxk9jYQ6FEY5NKiGSzwKBgQC3IRtPWoKMKMbGMMQ/FLMwhDzFwmEIU8hP\nEY7cxCzXdavoJT2wVaXv+JHOi3cG6xkGdJvYzsNra8gq4+d9VSTVXaiFoRcC3g/X\n2t4rQrXW9iYzzmklbtGyI3gFY2Tcg1uRJILF01yk7z7wXCUxO5U6YjwuFV/kaSUh\nojWlCTDqawKBgBm7EUfL6Lyxv7nqi+OjvJ2WztFUygGi1wd8REe1Kac5Y7OnMeDv\ndBwTi4qIM1noi0rJbUcG2nI9THe0zN5yZGJTn7vyEaFa0mzl4KT+3sqQX4tHzGlB\n2RY3kfx3/7+i49EsCzPB50eAiWIaf5ZtbdFGu/ZsGgmGBWVDsBf31/0hAoGAIK0p\noFk4HiZQgaDGA7N/3dJavbbXdZLtlR4+7ambjr6SdBPhFAvUViN2cPJ1xKhCiOJZ\nxK/wMsTCrNSJw9Vjgyb5IQ8DeiGBljSZnAKFS9wUKP5VyLYjeLPXgK6hmq9dsWJg\na0gxqcR+6IiookZNdGN+9YIe4DTayUuWYuJm9g0CgYBqB8DIm0/LfYsk1dF9fjwS\nku4BFnd+siqHZIKYSlt4DX1sLatENb7LV4H92wBYKz+PBSejq9ZzisHlPe1tRGbK\nenZYHBbRnDixkxjLAdjjHIEPMLBSWYyqcimZfucLEJwXrRm4QI39X5dseqQwwxtb\n2xO6vsq7Syckj2hpK2voug==\n-----END PRIVATE KEY-----\n",
+  "client_email": "secret-manager@davinci-onegroup-sqa.iam.gserviceaccount.com",
+  "client_id": "109124562037604320754",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/secret-manager%40davinci-onegroup-sqa.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
 }

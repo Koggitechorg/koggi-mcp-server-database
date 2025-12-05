@@ -5,9 +5,11 @@ import { fileURLToPath } from "url";
 // Obtener __dirname en ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const fullFilePath = path.join(__dirname, "sa.json");
+console.log(`fullFilePath: ${fullFilePath}`);
 
 // Construir ruta absoluta al sa.json
-const keyPath = path.join(__dirname, "sa.json");
+const keyPath = fullFilePath;
 
 // 1. ESTRUCTURA DE RESPUESTA JSON (Se mantiene para ser inyectada en el prompt)
 const responseSchema = {
@@ -29,22 +31,21 @@ const responseSchema = {
 const systemInstruction = `Eres un motor de mapeo de esquemas de base de datos. Utiliza EXCLUSIVAMENTE la información del contexto RAG. Si la información necesaria no está contenida en el contexto RAG, devuelve ÚNICAMENTE UN ARREGLO JSON VACÍO: []. No inventes datos.`;
 
 // 3. INICIALIZACIÓN (Vertex AI SDK)
-const ai = new VertexAI({
-    project: 'davinci-onegroup-dev', 
-    location: 'us-central1'
-});
+//const ai2 = new VertexAI({
+//    project: 'davinci-onegroup-sqa', 
+//    location: 'us-central1'
+//});
 
-const ai2 = new VertexAI({
-    project: 'davinci-onegroup-dev', // <-- obligatorio
+const ai = new VertexAI({
+    project: 'davinci-onegroup-sqa', // <-- obligatorio
     location: 'us-central1',
     googleAuthOptions: {
-        projectId: 'davinci-onegroup-dev', 
         keyFilename: keyPath
     }
 });
 
 const modelName = 'gemini-2.5-flash-lite';
-const ragCorpusId = 'projects/davinci-onegroup-dev/locations/us-east1/ragCorpora/2305843009213693952'; 
+const ragCorpusId = 'projects/davinci-onegroup-sqa/locations/us-east1/ragCorpora/6917529027641081856'; 
 
 
 const model = ai.preview.getGenerativeModel({

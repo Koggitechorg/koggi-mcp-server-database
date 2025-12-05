@@ -1,47 +1,39 @@
 #!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
+import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { z } from "zod";
-import express from "express";
-import cors from "cors";
-
 import { errorHandler } from "./error/error.handler.js";
 import { consultarRAGEngine } from "./handlers/rag.js";
 import { request_sql_database } from "./handlers/sqlRequest.js";
 
-// =====================================================
-// 🔧 MODO DE EJECUCIÓN (1 = STDIO, 2 = HTTP)
-// =====================================================
-let MODE = 2;   // <-- 🔥 Cambia este valor entre 1 y 2
-// const MODE = 2;
+import express from 'express';
+import cors from "cors";
 
-// =====================================================
-// 🔧 Crear instancia ÚNICA del MCP Server
-// =====================================================
+// --------------------------------------------------
+// 📌 Crear servidor MCP
+// --------------------------------------------------
 const mcp = new McpServer({
     name: "koggi-mcp-server",
-    version: "1.0.20"
+    version: "1.0.15"
 });
 
-// =====================================================
-// 🧰 Registrar herramientas (solo 1 vez)
-// =====================================================
-
+// --------------------------------------------------
+// 🧮 Herramienta: Obtener estructura RAG
+// --------------------------------------------------
 mcp.registerTool(
     "get_rag_database",
     {
         title: "Obtener estructura RAG",
-        description: "Devuelve estructura de tablas y columnas usando un motor RAG.",
+        description: "Retorna información estructural de tablas y columnas de la base de datos a partir de una pregunta en lenguaje natural utilizando un motor RAG desplegado en Vertex AI. La pregunta que se recibe es preguntando solamente por la o las tablas que existen en la base de datos. No se pregunta por nada mas que sea las tablas como cantidad, cuantos elementos hay en la tabla, etc.",
         inputSchema: {
-            question: z.string().describe("Pregunta natural sobre estructura de BD."),
+            question: z.string().describe("Pregunta en lenguaje natural."),
         },
         outputSchema: {
             content: z.array(z.object({
                 type: z.string(),
                 text: z.string(),
-            }))
-        }
+            })),
+        },
     },
     async ({ question }) =>
         errorHandler(async () => {
@@ -54,20 +46,23 @@ mcp.registerTool(
         })
 );
 
+// --------------------------------------------------
+// 🧮 Tool: Ejecutar consulta SQL
+// --------------------------------------------------
 mcp.registerTool(
     "get_request_database_sql",
     {
         title: "Ejecutar consulta SQL",
-        description: "Ejecuta una SQL generada previamente.",
+        description: "Ejecuta una query SQL a partir de una pregunta en lenguaje natural utilizando un motor RAG desplegado en Vertex AI ejecutado previamente.",
         inputSchema: {
-            sql_query: z.string().describe("SQL completa."),
+            sql_query: z.string().describe("Query SQL completa."),
         },
         outputSchema: {
             content: z.array(z.object({
                 type: z.string(),
                 text: z.string(),
-            }))
-        }
+            })),
+        },
     },
     async ({ sql_query }) =>
         errorHandler(async () => {
@@ -80,48 +75,34 @@ mcp.registerTool(
         })
 );
 
-// =====================================================
-// 🚀 EJECUCIÓN SEGÚN MODO
-// =====================================================
+// --------------------------------------------------
+// 🌐 Servidor HTTP para ChatGPT
+// --------------------------------------------------
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-console.log(`📌 MCP ejecutándose en modo: ${MODE === 1 ? "STDIO" : "HTTP"}`);
-
-
-// =====================================================
-// 🔌 MODO 1 — STDIO
-// =====================================================
-if (MODE === 1) {
-    console.log("🔌 Ejecutando MCP vía STDIO...");
-    const transport = new StdioServerTransport();
-    await mcp.connect(transport);
-}
-
-
-// =====================================================
-// 🌐 MODO 2 — HTTP
-// =====================================================
-if (MODE === 2) {
-    console.log("🌐 Ejecutando MCP vía HTTP...");
-
-    const app = express();
-    app.use(cors());
-    app.use(express.json());
-
-    app.post("/mcp", async (req, res) => {
-
-        const transport = new StreamableHTTPServerTransport({
-            sessionIdGenerator: undefined,
-            enableJsonResponse: true
-        });
-
-        res.on("close", () => transport.close());
-
-        await mcp.connect(transport);
-        await transport.handleRequest(req, res, req.body);
+// Endpoint MCP estándar: "/mcp"
+app.post('/mcp', async (req: any, res: any) => {
+    // Create a new transport for each request to prevent request ID collisions
+    const transport = new StreamableHTTPServerTransport({
+        sessionIdGenerator: undefined,
+        enableJsonResponse: true
     });
 
-    const PORT = process.env.PORT || 3001;
-    app.listen(PORT, () =>
-        console.log(`🚀 MCP HTTP disponible en http://localhost:${PORT}/mcp`)
-    );
-}
+    res.on('close', () => {
+        transport.close();
+    });
+
+    await mcp.connect(transport);
+    await transport.handleRequest(req, res, req.body);
+});
+
+// --------------------------------------------------
+// 🚀 Iniciar servidor HTTP
+// --------------------------------------------------
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+    console.log(`🚀 MCP HTTP server running on http://localhost:${PORT}/mcp`);
+});

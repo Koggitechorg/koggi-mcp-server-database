@@ -15,7 +15,7 @@ yarn.lock
 .env.production
 
 # Build outputs
-dist/
+# dist/
 build/
 coverage/
 .next/

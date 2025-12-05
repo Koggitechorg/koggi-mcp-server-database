@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "davinci-onegroup-sqa",
+  "private_key_id": "d7412fa0f3550bb6ce73e90ceb3bc3ecaa9efdb4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCG33lPpy0BXa/3\nQMrZbziFnSkBsHacYtTiwVhVa57FJXJXLZkPzXJrlZqEt4ZEq+yoGRA+I+F8DzU2\nxVO5ibg2do63eLoJXjhzmmbmvgG2PkYOAGu4mgouJjmxayO2+ywmbwEoTbOs0F2X\nddeuJMvlehmiv4dRJNIfBo1ZVsgSyZEf0WksRgloHeUyISwkvdctxzEtO7Kg7DTn\niwpKdhUZOtoxWBjsC33J+5niPv6Kn8JmSsvBcie4HnIv9CCXPGJIEGOUu1AMk3nw\nhzwUlgPYFmVntvLE4vRESUBhUxBhr52NQAdg+tEeUNl8jWuxWvzaEYCnjh41isBi\nkaMaCZKFAgMBAAECggEAAoqIpPQNeIZ5lDQ7PjA9oQdpzOCP6maJcd0jtpIEKm91\n07DPLImMMo8m0l0t/M30vQd9k1q4tmB1jEiPpKHrkfcgT63tj2XEtPKbAZWF5AUR\nEGfBxGT+mRva1pBGtg+plRODDiRqW5VC309STcW6tgbJaLioqmI43CE3i5AoFrsS\n7dk9z91hAMj6A8D5lPnGwnKKM9j6e7ooygpQ9rauwN+GqS7fcWkALG/aWa0Ac0rU\nLZYaDIfgKIUTS8Bddn00vz8IDPcZSssrvIoEvznP4WXPwe1brHSfQ2wmamUGh2W3\nxzpxzF1eCG4aF3zC0aECOsHIf7rGULy2mGEMdiRdpwKBgQC8ip6JTsjVQHhRz59R\ngZwz2Phyl+jT8g0eUdqPnKlXjr0Nl75JT9RdpKA7Lxv+93KV42EZw5djJCRSeB3c\nQgcBJSdfTrMpHWrtANh3+Mfw3Qa+uMc+O5obCdoa2PcPMC9JRQxb951Zhqpv2n7h\nsG+0kRgwxk9jYQ6FEY5NKiGSzwKBgQC3IRtPWoKMKMbGMMQ/FLMwhDzFwmEIU8hP\nEY7cxCzXdavoJT2wVaXv+JHOi3cG6xkGdJvYzsNra8gq4+d9VSTVXaiFoRcC3g/X\n2t4rQrXW9iYzzmklbtGyI3gFY2Tcg1uRJILF01yk7z7wXCUxO5U6YjwuFV/kaSUh\nojWlCTDqawKBgBm7EUfL6Lyxv7nqi+OjvJ2WztFUygGi1wd8REe1Kac5Y7OnMeDv\ndBwTi4qIM1noi0rJbUcG2nI9THe0zN5yZGJTn7vyEaFa0mzl4KT+3sqQX4tHzGlB\n2RY3kfx3/7+i49EsCzPB50eAiWIaf5ZtbdFGu/ZsGgmGBWVDsBf31/0hAoGAIK0p\noFk4HiZQgaDGA7N/3dJavbbXdZLtlR4+7ambjr6SdBPhFAvUViN2cPJ1xKhCiOJZ\nxK/wMsTCrNSJw9Vjgyb5IQ8DeiGBljSZnAKFS9wUKP5VyLYjeLPXgK6hmq9dsWJg\na0gxqcR+6IiookZNdGN+9YIe4DTayUuWYuJm9g0CgYBqB8DIm0/LfYsk1dF9fjwS\nku4BFnd+siqHZIKYSlt4DX1sLatENb7LV4H92wBYKz+PBSejq9ZzisHlPe1tRGbK\nenZYHBbRnDixkxjLAdjjHIEPMLBSWYyqcimZfucLEJwXrRm4QI39X5dseqQwwxtb\n2xO6vsq7Syckj2hpK2voug==\n-----END PRIVATE KEY-----\n",
+  "client_email": "secret-manager@davinci-onegroup-sqa.iam.gserviceaccount.com",
+  "client_id": "109124562037604320754",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/secret-manager%40davinci-onegroup-sqa.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
